@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Just Another Hand', cursive;
+    color: #565656;
+}
+
+.head{
+    font-size: 45px;
+    letter-spacing: 3px;
+    border-bottom: 3px solid #eee;
+    width: 400px;
+    text-align: center;
+}
+
+.board{
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    margin: 15px ;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.square{
+    border: 1px solid #bbb;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+#n-1{
+    border-top: none;
+    border-left: none;
+}
+
+#n-2{
+    border-top: none;
+    
+}
+
+#n-3{
+    border-top: none;
+    border-right: none;
+    
+}
+
+#n-4{
+    border-left: none;
+    
+}
+
+#n-6{
+    border-right: none;
+    
+}
+
+#n-7{
+    border-bottom: none;
+    border-left: none;
+    
+}
+
+#n-8{
+    border-bottom: none;
+    
+}
+
+#n-9{
+    border-bottom: none;
+    border-right: none;
+    
+}
+
+.rest-btn{
+    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.rest-btn:hover{
+    background-color: #eee;
+}
+
+.game-over{
+    width: 450px;
+    height: 200px;
+    background-color: #676767;
+    font-size: 50px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
