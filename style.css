@@ -11,13 +11,15 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Just Another Hand', cursive;
-    color: #565656;
+    /* color: #565656; */
+    background-color: #112B3C;
 }
 
 .head{
     font-size: 45px;
     letter-spacing: 3px;
-    border-bottom: 3px solid #eee;
+    border-bottom: 3px solid #EC994B;
+    color: #EC994B;
     width: 400px;
     text-align: center;
 }
@@ -33,7 +35,8 @@ body{
 }
 
 .square{
-    border: 1px solid #bbb;
+    border: 1px solid #EC994B;
+    color: #EC994B;
     width: 100%;
     height: 100%;
     display: flex;
@@ -90,23 +93,29 @@ body{
     font-size: 18px;
     padding: 5px 15px;
     border-radius: 50px;
-    border: 1px solid #bbb;
-    background-color: #fff;
+    border: 1px solid #112B3C;
+    background-color: #EC994B;
+    color: #112B3C;
     cursor: pointer;
     margin-top: 10px;
+    transition-property: background color border;
+    transition-duration: .2s;
 }
 
 .rest-btn:hover{
-    background-color: #eee;
+    border-color: #EC994B;
+    background-color: #112B3C;
+    color: #EC994B;
 }
 
 .game-over{
     width: 450px;
     height: 200px;
-    background-color: #676767;
+    background-color: #112B3C;
     font-size: 50px;
-    color: #fff;
+    color: #EC994B;
     border-radius: 5px;
+    border: 3px solid #EC994B;
     position: absolute;
     display: flex;
     flex-direction: column;

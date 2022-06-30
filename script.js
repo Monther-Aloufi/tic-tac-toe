@@ -5,8 +5,11 @@ const square = document.querySelectorAll('.square')
 const gameOverP = document.querySelector('.game-over')
 const PWinner = document.querySelector('.winner')
 const restBtn = document.querySelectorAll('.rest-btn')
+const board = document.querySelector('.board')
 
 let y =1;
+
+console.log(square[4].textContent)
 
 const check = (p)=>{
     if(square[0].textContent == square[1].textContent && square[1].textContent == square[2].textContent 
@@ -28,6 +31,19 @@ const check = (p)=>{
             gameOverP.classList.remove('hidden')
             PWinner.textContent = `player ${p} won`
             restBtn[1].classList.add('hidden')
+            board.classList.add('hidden')
+        }else{
+            let x = 0
+            for(let i = 0; i < 9; i++)
+                if(square[i].textContent === '')
+                    x++
+            
+            if(x === 0){
+                gameOverP.classList.remove('hidden')
+                PWinner.textContent = `Draw`
+                restBtn[1].classList.add('hidden')
+                board.classList.add('hidden')
+            }
         }
 }
 
@@ -37,6 +53,8 @@ const restGame = function(){
         el.textContent = ''
     })
     restBtn[1].classList.remove('hidden')
+    board.classList.remove('hidden')
+
 }
 
 square.forEach(el=>{
